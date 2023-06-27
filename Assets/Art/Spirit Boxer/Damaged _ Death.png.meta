@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a647d979b1165f948a9297250e550a89
+guid: 49056627213cb98469784d18af2158a4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blast_0
+      name: Damaged & Death_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 115
-        width: 121
-        height: 23
+        y: 484
+        width: 45.666668
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06602a820c1baef489bbb9f043033709
-      internalID: 256130540
+      spriteID: 3ec27a4e07bcbcb4dbcd21de784c338c
+      internalID: -1815444935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blast_1
+      name: Damaged & Death_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 92
-        width: 121
-        height: 23
+        y: 440
+        width: 45.666668
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ca87399ffd6fa2429a30fbd99a7cdf9
-      internalID: -928830276
+      spriteID: 263bb8454af79ca4f902be23e4fd07d3
+      internalID: 1476632395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blast_2
+      name: Damaged & Death_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 69
-        width: 121
-        height: 23
+        y: 396
+        width: 45.666668
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c0b5acfdd9a6b94c926d32d84035e80
-      internalID: 956693268
+      spriteID: dd9c1ae159d7a9144900f38177cbd51f
+      internalID: -1976638721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blast_3
+      name: Damaged & Death_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 46
-        width: 121
-        height: 23
+        y: 352
+        width: 45.666668
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 079c881ab671fbf4292b0e1386f1e7f6
-      internalID: -575533759
+      spriteID: 70ca47fad51298b459dd6b11929dba1e
+      internalID: 1937383734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blast_4
+      name: Damaged & Death_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 23
-        width: 121
-        height: 23
+        y: 308
+        width: 45.666668
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +214,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4e1580abf2f89541a0d928e9c6e71ff
-      internalID: 651811291
+      spriteID: 25af226f5f9bb9d4193d0bfa2961e401
+      internalID: 451790536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blast_5
+      name: Damaged & Death_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 45.666668
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65388fa8b3fe52940aceba496c287c48
+      internalID: 102934091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged & Death_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 45.666668
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19cebaa655936541904b774118f7b6c
+      internalID: -1144584639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged & Death_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 45.666668
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897e471db029d2e4e944bc5ef306db3b
+      internalID: -1026062646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged & Death_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 45.666668
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a5ac77bf755894eb611b90041df11f
+      internalID: -104733153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged & Death_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 45.666668
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc93d39cf4f98df41b48b9a305513590
+      internalID: -1054049703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged & Death_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 45.666668
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f07e4c394754e4381e27f79c6b6011
+      internalID: -1436712679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged & Death_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 121
-        height: 23
+        width: 45.666668
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +361,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1b92f4629d86944ba812811ca26f4cb
-      internalID: 2101567043
+      spriteID: d889d7d8df4fc424daf3d1985a2a85c2
+      internalID: 835555056
       vertices: []
       indices: 
       edges: []
@@ -252,12 +378,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      blast_5: 2101567043
-      blast_4: 651811291
-      blast_0: 256130540
-      blast_1: -928830276
-      blast_2: 956693268
-      blast_3: -575533759
+      Damaged & Death_4: 451790536
+      Damaged & Death_7: 2003215071
+      Damaged & Death_8: -1026062646
+      Damaged & Death_9: -104733153
+      Damaged & Death_10: -1054049703
+      Damaged & Death_1: 1476632395
+      Damaged & Death_11: -1436712679
+      Damaged & Death_2: -1976638721
+      Damaged & Death_3: 1937383734
+      Damaged & Death_5: 102934091
+      Damaged & Death_12: 835555056
+      Damaged & Death_6: -1144584639
+      Damaged & Death_0: -1815444935
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a647d979b1165f948a9297250e550a89
+guid: 04a8fb4ad08639843a2fead6bd790168
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,127 +116,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blast_0
+      name: Idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 115
-        width: 121
-        height: 23
+        x: 7
+        y: 132
+        width: 20
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 6, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06602a820c1baef489bbb9f043033709
-      internalID: 256130540
+      spriteID: 4c3e46fd23d8d054bbefb376534ffb4d
+      internalID: -1484619644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blast_1
+      name: Idle_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 92
-        width: 121
-        height: 23
+        y: 88
+        width: 34.25
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ca87399ffd6fa2429a30fbd99a7cdf9
-      internalID: -928830276
+      spriteID: 34328b491500ed54882076fee672a1df
+      internalID: 1577534288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blast_2
+      name: Idle_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 69
-        width: 121
-        height: 23
+        y: 44
+        width: 34.25
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c0b5acfdd9a6b94c926d32d84035e80
-      internalID: 956693268
+      spriteID: a50473861a94b79418bca0e7663f49d2
+      internalID: 2073121272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blast_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 46
-        width: 121
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 079c881ab671fbf4292b0e1386f1e7f6
-      internalID: -575533759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blast_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 23
-        width: 121
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4e1580abf2f89541a0d928e9c6e71ff
-      internalID: 651811291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blast_5
+      name: Idle_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 121
-        height: 23
+        width: 34.25
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1b92f4629d86944ba812811ca26f4cb
-      internalID: 2101567043
+      spriteID: c97cf28bc2c30ce448b878efb8ce85c0
+      internalID: -372031489
       vertices: []
       indices: 
       edges: []
@@ -252,12 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      blast_5: 2101567043
-      blast_4: 651811291
-      blast_0: 256130540
-      blast_1: -928830276
-      blast_2: 956693268
-      blast_3: -575533759
+      Idle_1: 1577534288
+      Idle_3: -372031489
+      Idle_0: -1484619644
+      Idle_2: 2073121272
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
