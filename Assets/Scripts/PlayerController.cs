@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(3);
         }
 
-        healthText.text = "Health: " + PlayerStats.health + " / " + PlayerStats.maxHealth;
+        //healthText.text = "Health: " + PlayerStats.health + " / " + PlayerStats.maxHealth;
         //Get direction keypress from user
         directionX = Input.GetAxis("Horizontal");
         directionY = Input.GetAxis("Vertical");
