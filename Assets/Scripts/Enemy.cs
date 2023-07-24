@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Threading;
+using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
+    public AIPath aiPath;
+    Vector2 direction;
     public int health = 2;
     public int damage = 1;
     public float speed = 1f;
@@ -24,11 +27,21 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        speed = 2f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        direction = aiPath.desiredVelocity;
+        if (direction.x > 0f) {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        } else if (direction.x < 0f) {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+
+        animator.SetFloat("Speed", Mathf.Abs(direction.x) + Mathf.Abs(direction.y));
+
         if (nextTime != 0f && Time.time > nextTime) {
             Destroy(this.gameObject);
         }
@@ -42,14 +55,15 @@ public class Enemy : MonoBehaviour
     
     void Attack(Collider2D collision) {
         animator.SetTrigger("Attack");
-        collision.GetComponent<PlayerController>().decreaseHealth();
+        collision.GetComponent<PlayerController>().decreaseHealth(damage);
         Debug.Log("Being damaged!!");
         nextAttackTime = Time.time + 2.2f;
     }
 
     public bool takeDamage(int damage) {
         animator.SetTrigger("Damaged");
-        if (--health == 0) {
+        health -= damage;
+        if (health <= 0) {
             die();
             return true;
         }

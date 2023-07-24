@@ -24,9 +24,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public Animator animator;
+    public HealthBar healthBar;
 
-    public Text healthText;
+    public FuelBar fuelBar;
+
+    public Animator animator;
 
     public float playerFeetRadius = 0.2f;
     private float directionX = 0f;
@@ -42,11 +44,12 @@ public class PlayerController : MonoBehaviour
     public float fireWidth = 0f;
     private bool check = true;
 
-    private int damage = 1;
     public float attackRate = 1f;
     float nextAttackTime = 0f;
     float nextTime = 0f;
     float nextWinTime = 0f;
+    float nextAddFuelTime = 0f;
+    int activeScene = -1;
 
     Vector2 movementInput;
     public ContactFilter2D movementFilter;
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
     bool canMove = true;
     
     int killed = 0;
+    int[] numOfEnemies = new int[13] {1, 4, 5, 1, 6, 6, 7, 9, 15, 13, 13, 27, 14};
 
     // Start is called before the first frame update
     void Start()
@@ -63,19 +67,28 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         PlayerStats.refresh();
+        healthBar.SetMaxHealth(PlayerStats.maxHealth);
+        fuelBar.SetMaxFuel(PlayerStats.maxFuel);
+        activeScene = SceneManager.GetActiveScene().buildIndex;
+        PlayerStats.currLevel = activeScene-1;
     }
 
     // Update is called once per frame
     void Update()
     {   
-        if (killed == 14 && nextWinTime == 0f) nextWinTime = Time.time + 2f;
-        if (nextWinTime != 0 && Time.time > nextWinTime) SceneManager.LoadScene(2);
+        healthBar.SetHealth(PlayerStats.health);
+        if (Time.time > nextAddFuelTime) {
+            PlayerStats.increaseFuel();
+            nextAddFuelTime = Time.time + 1.5f;
+        }
+        fuelBar.SetFuel(PlayerStats.fuel);
+        if (killed == numOfEnemies[activeScene-1] && nextWinTime == 0f) nextWinTime = Time.time + 2f;
+        if (nextWinTime != 0 && Time.time > nextWinTime) SceneManager.LoadScene(14);
         if (nextTime != 0 && Time.time > nextTime) {
             Destroy(this.gameObject);
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(15);
         }
 
-        //healthText.text = "Health: " + PlayerStats.health + " / " + PlayerStats.maxHealth;
         //Get direction keypress from user
         directionX = Input.GetAxis("Horizontal");
         directionY = Input.GetAxis("Vertical");
@@ -83,7 +96,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(directionX) + Mathf.Abs(directionY));
         if (canMove) {
             if(movementInput != Vector2.zero){
-                    
+
                 bool success = TryMove(movementInput);
 
                 if(!success && movementInput.x != 0) {
@@ -120,8 +133,9 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
-            if (Time.time > nextAttackTime) {
+            if (Time.time > nextAttackTime && PlayerStats.fuel == PlayerStats.maxFuel) {
                 Fire(check ? 1 : -1);
+                PlayerStats.restartFuel();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
@@ -141,7 +155,7 @@ public class PlayerController : MonoBehaviour
                 castCollisions, // List of collisions to store the found collisions into after the Cast is finished
                 PlayerStats.speed * Time.fixedDeltaTime + collisionOffset); // The amount to cast equal to the movement plus an offset
 
-            if(count == 0){
+            if(count == 0) {
                 playerRb.MovePosition(playerRb.position + direction * PlayerStats.speed * Time.fixedDeltaTime);
                 return true;
             } else {
@@ -164,7 +178,7 @@ public class PlayerController : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach(Collider2D enemy in hitEnemies) 
         {
-            if (enemy.GetComponent<Enemy>().takeDamage(damage)) ++killed;
+            if (enemy.GetComponent<Enemy>().takeDamage(PlayerStats.attack)) {++killed; PlayerStats.increaseFuel();}
             Debug.Log("We attack " + enemy.name);
         }
     }
@@ -176,14 +190,14 @@ public class PlayerController : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapAreaAll(new Vector2(attackPoint.position.x, attackPoint.position.y - fireWidth), vt, enemyLayers);
         foreach(Collider2D enemy in hitEnemies) 
         {
-            if (enemy.GetComponent<Enemy>().takeDamage(damage)) ++killed;
+            if (enemy.GetComponent<Enemy>().takeDamage(PlayerStats.attack)) {++killed; PlayerStats.increaseFuel();}
             Debug.Log("We fire " + enemy.name);
         }
     }
 
-    public void decreaseHealth() {
+    public void decreaseHealth(int damage) {
         animator.SetTrigger("Damaged");
-        PlayerStats.decreaseHealth();
+        while(damage-->0) PlayerStats.decreaseHealth();
         if (PlayerStats.health <= 0) {
             animator.SetTrigger("Dead");
             nextTime = Time.time + 1f;

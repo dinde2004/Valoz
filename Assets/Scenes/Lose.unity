@@ -1027,7 +1027,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2064854510}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: DemoLevelButton
+        m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Health
+  - Speed
+  - Attack
+  - Armor
+  - Random
   layers:
   - Default
   - TransparentFX
